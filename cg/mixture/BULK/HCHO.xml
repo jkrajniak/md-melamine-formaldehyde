@@ -1,0 +1,22 @@
+<cg_molecule>
+  <name>FOR</name>
+	<ident>FOR</ident>
+  <topology>
+    <cg_beads>
+      <cg_bead>
+        <name>B1</name>
+        <type>B</type>
+        <symmetry>1</symmetry>
+        <mapping>B</mapping>
+        <beads> 1:FOR:H1 1:FOR:C1 1:FOR:H2 1:FOR:O1 </beads>
+      </cg_bead>
+    </cg_beads>
+  </topology>
+
+  <maps>
+    <map>
+      <name>B</name>
+      <weights> 1.008 12.011  1.008  15.9994 </weights>
+    </map>
+  </maps>
+</cg_molecule>

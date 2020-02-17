@@ -1,0 +1,19 @@
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+  1             1               no              0.0     0.0
+
+[ atomtypes ]
+;type    mass    charge       ptype          sigma      epsilon
+A    8   42.040399   0.000     A   1.0   1.0
+B    8   30.026400   0.000     A   1.0   1.0
+
+#include "./Melamine_CG.itp"
+#include "./Formaldehyde_CG.itp"
+
+[ system ]
+; Name
+Melamine_Formaldehyde
+[ molecules ]
+; Compound        #mols
+MEL     1000   
+FOR 3000   

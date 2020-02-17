@@ -1,0 +1,49 @@
+<cg_molecule>
+  <name>MEL</name>
+	<ident>MEL</ident>
+  <topology>
+    <cg_beads>
+      <cg_bead>
+        <name>A1</name>
+        <type>A</type>
+        <symmetry>1</symmetry>
+        <mapping>A</mapping>
+        <beads> 1:MEL:C11 1:MEL:N11 1:MEL:N21 1:MEL:H21 1:MEL:H22 </beads>
+      </cg_bead>
+      <cg_bead>
+        <name>A2</name>
+        <type>A</type>
+        <symmetry>1</symmetry>
+        <mapping>A</mapping>
+        <beads> 1:MEL:C12 1:MEL:N22 1:MEL:N13 1:MEL:H31 1:MEL:H32 </beads>
+      </cg_bead>
+      <cg_bead>
+        <name>A3</name>
+        <type>A</type>
+        <symmetry>1</symmetry>
+        <mapping>A</mapping>
+        <beads> 1:MEL:C13 1:MEL:N23 1:MEL:N23 1:MEL:H11 1:MEL:H12 </beads>
+      </cg_bead>
+
+    </cg_beads>
+    <cg_bonded>
+
+      <bond>
+        <name>bond</name>
+        <beads>
+        A1 A2 
+        A2 A3 
+        A3 A1 
+        </beads>
+      </bond>
+
+    </cg_bonded>
+  </topology>
+
+  <maps>
+    <map>
+      <name>A</name>
+      <weights> 12.0107 14.0067  14.0067 1.008 1.008 </weights>
+    </map>
+  </maps>
+</cg_molecule>

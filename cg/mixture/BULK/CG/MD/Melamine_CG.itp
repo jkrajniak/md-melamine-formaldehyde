@@ -1,0 +1,14 @@
+[ moleculetype ]
+MEL 3
+
+[atoms]
+; nr type resnr residue atom cgnr charge mass
+1 A 1 RES A1 1 0.000000 42.040399
+2 A 1 RES A2 2 0.000000 42.040399
+3 A 1 RES A3 3 0.000000 42.040399
+
+
+[ bonds ]
+1 2 8  1 1.0 ; 1:bond:1
+2 3 8  1 1.0 ; 1:bond:2
+3 1 8  1 1.0 ; 1:bond:3

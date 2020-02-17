@@ -1,0 +1,11 @@
+<cg>
+<bonded>
+</bonded>
+<inverse>
+<gromacs>
+<pot_max>1E6</pot_max>
+<table_end>1.0</table_end>
+<table_bins>0.002</table_bins>
+</gromacs>
+</inverse>
+</cg>

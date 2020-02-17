@@ -1,0 +1,11 @@
+#include "/apps/leuven/thinking/2014a/software/GROMACS/4.6.5-intel-2014a-hybrid/share/gromacs/top/oplsaa.ff/forcefield.itp"
+#include "./Melamine.itp"
+#include "./Formaldehyde.itp"
+
+[ system ]
+; Name
+Melamine_Formaldehyde
+[ molecules ]
+; Compound        #mols
+MEL     1000   
+FOR 3000   
