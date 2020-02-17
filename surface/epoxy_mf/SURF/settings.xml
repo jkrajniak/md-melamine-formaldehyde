@@ -1,0 +1,201 @@
+<cg>
+  <!-- example for a non-bonded interaction entry -->
+  <non-bonded>
+    <!-- name of the interaction -->
+    <name>A-G</name>
+    <!-- types involved in this interaction -->
+    <type1>A</type1>
+    <type2>G</type2>
+    <!-- dimension + grid spacing of tables for calculations -->
+    <min>0</min>
+    <max>2.0</max>
+    <step>0.01</step>
+    <inverse>
+      <!-- target distribution (rdf), just give gromas rdf.xvg -->
+      <target>A-G.dist.tgt</target>
+      <!-- update cycles -->
+      <do_potential>1 0 0 0 0 0</do_potential>
+      <!-- additional post processing of dU before added to potential -->
+      <!-- additional post processing of U after dU added to potential -->
+      <post_add>convergence</post_add>
+      <!-- name of the table for gromacs run -->
+      <post_update> smooth </post_update>
+      <gromacs>
+        <table>table_A_G.xvg</table>
+      </gromacs>
+    </inverse>
+  </non-bonded>
+  
+  <non-bonded>
+    <!-- name of the interaction -->
+    <name>B-G</name>
+    <!-- types involved in this interaction -->
+    <type1>B</type1>
+    <type2>G</type2>
+    <!-- dimension + grid spacing of tables for calculations -->
+    <min>0</min>
+    <max>2.0</max>
+    <step>0.01</step>
+    
+    <inverse>
+      <!-- target distribution (rdf), just give gromas rdf.xvg -->
+      <target>B-G.dist.tgt</target>
+      <!-- update cycles -->
+      <do_potential>0 1 0 0 0 0</do_potential>
+      <!-- additional post processing of dU before added to potential -->
+      <!-- additional post processing of U after dU added to potential -->
+      <post_add>convergence</post_add>
+      <!-- inverse monte carlo specific stuff -->
+      <!-- name of the table for gromacs run -->
+      <post_update> smooth  </post_update>
+      <gromacs>
+        <table>table_B_G.xvg</table>
+      </gromacs>
+    </inverse>
+  </non-bonded>
+
+  <non-bonded>
+    <!-- name of the interaction -->
+    <name>C-G</name>
+    <!-- types involved in this interaction -->
+    <type1>C</type1>
+    <type2>G</type2>
+    <!-- dimension + grid spacing of tables for calculations -->
+    <min>0</min>
+    <max>2.0</max>
+    <step>0.01</step>
+    <inverse>
+      <!-- target distribution (rdf), just give gromas rdf.xvg -->
+      <target>C-G.dist.tgt</target>
+      <!-- update cycles -->
+      <do_potential>0 0 1 0 0 0</do_potential>
+      <!-- additional post processing of dU before added to potential -->
+      <!-- additional post processing of U after dU added to potential -->
+      <post_add>convergence</post_add>
+      <!-- name of the table for gromacs run -->
+      <post_update> smooth </post_update>
+      <gromacs>
+        <table>table_C_G.xvg</table>
+      </gromacs>
+    </inverse>
+  </non-bonded>
+
+  <non-bonded>
+    <!-- name of the interaction -->
+    <name>D-G</name>
+    <!-- types involved in this interaction -->
+    <type1>D</type1>
+    <type2>G</type2>
+    <!-- dimension + grid spacing of tables for calculations -->
+    <min>0</min>
+    <max>2.0</max>
+    <step>0.01</step>
+    <inverse>
+      <!-- target distribution (rdf), just give gromas rdf.xvg -->
+      <target>D-G.dist.tgt</target>
+      <!-- update cycles -->
+      <do_potential>0 0 0 1 0 0</do_potential>
+      <!-- additional post processing of dU before added to potential -->
+      <!-- additional post processing of U after dU added to potential -->
+      <post_add>convergence</post_add>
+      <!-- name of the table for gromacs run -->
+      <post_update> smooth </post_update>
+      <gromacs>
+        <table>table_D_G.xvg</table>
+      </gromacs>
+    </inverse>
+  </non-bonded>
+
+  <non-bonded>
+    <!-- name of the interaction -->
+    <name>E-G</name>
+    <!-- types involved in this interaction -->
+    <type1>E</type1>
+    <type2>G</type2>
+    <!-- dimension + grid spacing of tables for calculations -->
+    <min>0</min>
+    <max>2.0</max>
+    <step>0.01</step>
+    <inverse>
+      <!-- target distribution (rdf), just give gromas rdf.xvg -->
+      <target>E-G.dist.tgt</target>
+      <!-- update cycles -->
+      <do_potential>0 0 0 0 1 0</do_potential>
+      <!-- additional post processing of dU before added to potential -->
+      <!-- additional post processing of U after dU added to potential -->
+      <post_add>convergence</post_add>
+      <!-- inverse monte carlo specific stuff -->
+      <!-- name of the table for gromacs run -->
+      <post_update> smooth </post_update>
+      <gromacs>
+        <table>table_E_G.xvg</table>
+      </gromacs>
+    </inverse>
+  </non-bonded>
+  <non-bonded>
+    <!-- name of the interaction -->
+    <name>F-G</name>
+    <!-- types involved in this interaction -->
+    <type1>F</type1>
+    <type2>G</type2>
+    <!-- dimension + grid spacing of tables for calculations -->
+    <min>0</min>
+    <max>2.0</max>
+    <step>0.01</step>
+    <inverse>
+      <!-- target distribution (rdf), just give gromas rdf.xvg -->
+      <target>F-G.dist.tgt</target>
+      <!-- update cycles -->
+      <do_potential>0 0 0 0 0 1</do_potential>
+      <!-- additional post processing of dU before added to potential -->
+      <!-- additional post processing of U after dU added to potential -->
+      <post_add>convergence</post_add>
+      <!-- inverse monte carlo specific stuff -->
+      <!-- name of the table for gromacs run -->
+      <post_update> smooth </post_update>
+      <gromacs>
+        <table>table_F_G.xvg</table>
+      </gromacs>
+    </inverse>
+  </non-bonded>
+
+  <!-- general options for inverse script -->
+  <inverse>
+    <!-- 298*0.00831451 gromacs units -->
+    <kBT>2.47772398</kBT>
+    <!-- use gromacs as simulation program -->
+    <program>gromacs</program>
+    <!-- gromacs specific options -->
+    <gromacs>
+      <grompp>
+        <bin>grompp_mpi</bin>
+      </grompp>
+      <g_energy><bin>g_energy_mpi</bin></g_energy>
+      <mdrun><command>mpiexec -n 20 mdrun_mpi -v</command></mdrun>
+      <!-- trash so many frames at the beginning -->
+      <equi_time>200</equi_time>
+      <!-- grid for table*.xvg !-->
+      <table_bins>0.002</table_bins>
+      <!-- cut the potential at this value (gromacs bug) -->
+      <pot_max>1000000</pot_max>
+      <!-- extend the tables to this value -->
+      <table_end>3.5</table_end>
+      <traj>traj.trr</traj>
+    </gromacs>
+    <!-- these files are copied for each new run -->
+    <filelist>grompp.mdp topol.top table.xvg table_b1.xvg index.ndx table_A_A.xvg table_A_B.xvg table_A_C.xvg table_A_D.xvg table_A_E.xvg table_A_F.xvg table_B_B.xvg table_B_C.xvg table_B_D.xvg table_B_E.xvg table_B_F.xvg table_C_C.xvg table_C_D.xvg table_C_E.xvg table_C_F.xvg table_D_D.xvg table_D_E.xvg table_D_F.xvg table_E_E.xvg table_E_F.xvg table_F_F.xvg </filelist>
+    <!-- do so many iterations -->
+    <iterations_max>500</iterations_max>
+    <convergence_check>
+      <limit>0.001</limit>
+      <name_glob>*.conv</name_glob>
+    </convergence_check>
+    <!-- ibm: inverse biltzmann imc: inverse monte carlo -->
+    <method>ibi</method>
+    <!-- write log to this file -->
+    <log_file>inverse.log</log_file>
+    <!-- write restart step to this file -->
+    <restart_file>restart_points.log</restart_file>
+    <cleanlist>traj.xtc traj.trr table_A_A.xvg table_A_B.xvg table_A_C.xvg table_A_D.xvg table_A_E.xvg table_A_F.xvg table_B_B.xvg table_B_C.xvg table_B_D.xvg table_B_E.xvg table_B_F.xvg table_C_C.xvg table_C_D.xvg table_C_E.xvg table_C_F.xvg table_D_D.xvg table_D_E.xvg table_D_F.xvg</cleanlist>
+  </inverse>
+</cg>

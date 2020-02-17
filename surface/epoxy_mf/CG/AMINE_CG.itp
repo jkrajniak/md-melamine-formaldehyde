@@ -1,0 +1,13 @@
+[ moleculetype ]
+DET 3
+
+[atoms]
+; nr type resnr residue atom cgnr charge mass
+1 E 1 RES E1 1 0.000000 30.049699
+2 F 1 RES F1 2 0.000000 43.068699
+3 E 1 RES E2 3 0.000000 30.049699
+[ bonds ]
+1 2 1 0.262 15080.5  ; 1:bond:1
+2 3 1 0.262 15080.5 ; 1:bond:2
+[ angles ]
+1 2 3 1   121.0  320.51 ; 1:angle:1

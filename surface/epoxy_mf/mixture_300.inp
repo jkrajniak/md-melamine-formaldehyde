@@ -1,0 +1,23 @@
+#
+# A mixture of melamine and formaldehyde
+#
+
+tolerance 5.0
+filetype pdb
+output conf_100_38_new.pdb
+add_box_sides 1.0 
+
+structure DETA.pdb
+  number 190 
+  inside box 0. 0. 0. 200. 200. 200. 
+end structure
+
+structure EPON-828.pdb
+  number 500 
+  inside box 0. 0. 0. 200. 200. 200. 
+end structure
+
+structure melf.pdb
+  number 500
+  inside box 0. 0. 0. 200. 200. 200.0
+end structure

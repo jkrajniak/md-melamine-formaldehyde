@@ -1,0 +1,14 @@
+#include "/apps/leuven/thinking/2014a/software/GROMACS/4.6.5-intel-2014a-hybrid/share/gromacs/top/oplsaa.ff/forcefield.itp"
+#include "./DETA.itp"
+#include "./EPOXY.itp"
+#include "./MF.itp"
+
+[ system ]
+; Name
+EPON-828
+
+[ molecules ]
+; Compound        #mols
+MOL           500 
+EPO           500 
+DET           190 

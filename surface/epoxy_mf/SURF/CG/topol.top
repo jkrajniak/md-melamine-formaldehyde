@@ -1,0 +1,25 @@
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+  1             1               no              0.0     0.0
+
+
+[ atomtypes ]
+;type    mass    charge       ptype          sigma      epsilon
+ E     30.049699   0.000       A        1.000000000  1.000000000
+ F     43.068699   0.000       A        1.000000000  1.000000000
+ A     43.045400   0.000       A        1.000000000  1.000000000
+ B     30.026400   0.000       A        1.000000000  1.000000000
+ C     76.097998   0.000       A        1.000000000  1.000000000
+ D     42.080999   0.000       A        1.000000000  1.000000000
+ G     72.066799   0.000       A        1.000000000  1.000000000
+#include "./MF_CG.itp"
+#include "./EPOXY_CG.itp"
+#include "./AMINE_CG.itp"
+[ system ]
+EPON-828-DETA
+
+[ molecules ]
+; Compound        #mols
+DET             190 
+EPO             500 
+RES             500 
