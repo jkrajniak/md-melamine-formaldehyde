@@ -1,0 +1,43 @@
+units real
+atom_style full
+
+dimension 3
+timestep  1.0
+boundary p p f
+
+read_data data.lmp
+
+pair_style table linear 1000
+pair_coeff 1 1 A_A.xvg table_A_A
+
+velocity all create 800 87287 loop geom
+neighbor 3.0 bin
+neigh_modify every 2 delay 10 check yes
+fix  2 all nvt temp 700.0 700.0 10.0 #iso 25000.0 25000.0 1000.0
+fix             3 all langevin 700.0 700.0 1.0 82859 
+
+variable Lz0 equal zhi
+variable Lz equal ${Lz0}
+
+change_box all z delta -25.0 25.0 units box
+
+fix wallz all wall/lj93 zlo EDGE 1.0 10.0 25.0 zhi EDGE 1.0 10.0 25.0 units box
+
+print 'Lz = ${Lz}'
+
+fix 1 all deform 10 z final 0.0 ${Lz} units box remap x
+
+dump myDump all atom 100 dump.atom
+
+thermo_style    custom time temp evdwl pe ke etotal zlo zhi press
+thermo          1000
+
+run 100000
+
+write_dump all custom after_deform.atom id type xu yu zu
+
+unfix 1
+
+run 100000
+
+write_dump all custom confout.atom id type xu yu zu
